@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AllJobs = () => {
+  const navigate = useNavigate();
   const [jobAnnouncements, setJobAnnouncements] = useState([]);
 
   useEffect(() => {
@@ -8,6 +10,11 @@ const AllJobs = () => {
       .then((res) => res.json())
       .then((data) => setJobAnnouncements(data.jobAnnouncements || []));
   }, []);
+
+  const handleApplyJob = (jobId) => {
+    console.log(jobId);
+    navigate(`/applyForJob/${jobId}`);
+  };
 
   return (
     <div className="max-w-4xl mx-auto bg-white rounded-md shadow-lg my-8 p-4">
@@ -24,6 +31,12 @@ const AllJobs = () => {
             Posted Date: {job.postedDate} | Expiration Date:{" "}
             {job.expirationDate}
           </p>
+          <button
+            className="bg-primary text-white px-4 py-2 rounded"
+            onClick={() => handleApplyJob(job.id)}
+          >
+            Apply Job
+          </button>
         </div>
       ))}
     </div>

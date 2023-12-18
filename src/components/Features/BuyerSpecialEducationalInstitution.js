@@ -1,39 +1,40 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const BuyerSpecialEducationalInstitution = () => {
   const [eduInstitutions, setEduInstitutions] = useState([]);
+  const [filteredInstitutions, setFilteredInstitutions] = useState([]);
   const [searchCriteria, setSearchCriteria] = useState({
-    jobAvailability: "",
-    distance: "",
+    job_vacancy: "",
+    distance_from_place: "",
     area: "",
   });
   const [uniqueAreas, setUniqueAreas] = useState([]);
 
-   useEffect(() => {
-     fetch("./educationalInstitution.json")
-       .then((res) => res.json())
-       .then((data) => {
-         setEduInstitutions(data.educational_institutions || []);
+  useEffect(() => {
+    fetch("./educationalInstitution.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setEduInstitutions(data.educational_institutions || []);
 
-         // Extract unique areas
-         const areas = Array.from(
-           new Set(
-             data.educational_institutions.map((inst) => inst.location.area)
-           )
-         );
-         setUniqueAreas(areas);
-       });
-   }, []);
+        const areas = Array.from(
+          new Set(
+            data.educational_institutions.map((inst) => inst.location.area)
+          )
+        );
+        setUniqueAreas(areas);
+      });
+  }, []);
 
   const handleSearch = () => {
     const filteredInstitutions = eduInstitutions.filter((institution) => {
       return (
-        (searchCriteria.jobAvailability === "" ||
+        (searchCriteria.job_vacancy === "" ||
           institution.job_vacancy ===
-            (searchCriteria.jobAvailability === "true")) &&
-        (searchCriteria.distance === "" ||
-          institution.distance_from_place <= Number(searchCriteria.distance)) &&
+            (searchCriteria.job_vacancy === "true")) &&
+        (searchCriteria.distance_from_place === "" ||
+          institution.distance_from_place <=
+            Number(searchCriteria.distance_from_place)) &&
         (searchCriteria.area === "" ||
           institution.location.area
             .toLowerCase()
@@ -41,12 +42,18 @@ const BuyerSpecialEducationalInstitution = () => {
       );
     });
 
-    setEduInstitutions(filteredInstitutions);
+    setFilteredInstitutions(filteredInstitutions);
   };
+
+  useEffect(() => {
+    setFilteredInstitutions(eduInstitutions);
+  }, [eduInstitutions]);
 
   return (
     <div className="max-w-4xl mx-auto bg-white rounded-md shadow-lg my-8 p-4">
+      {/* Search and filter options */}
       <div className="mb-4">
+        {/* search by job vacancy  */}
         <label className="mr-2">Job Availability:</label>
         <select
           value={searchCriteria.job_vacancy}
@@ -63,6 +70,7 @@ const BuyerSpecialEducationalInstitution = () => {
           <option value="false">Not Available</option>
         </select>
 
+        {/* search by distance  */}
         <label className="ml-4 mr-2">Distance (km):</label>
         <input
           type="number"
@@ -76,9 +84,11 @@ const BuyerSpecialEducationalInstitution = () => {
           }
         />
 
-        <label className="ml-4 mr-2">Area:</label>
+        {/* search by area  */}
+        <label className="ml-4 mr-4">Area:</label>
         <select
           value={searchCriteria.area}
+          className="input input-bordered input-sm w-36"
           onChange={(e) =>
             setSearchCriteria({
               ...searchCriteria,
@@ -95,14 +105,14 @@ const BuyerSpecialEducationalInstitution = () => {
         </select>
 
         <button
-          className="bg-primary justify-end text-white px-4 py-2 rounded"
+          className="bg-primary ml-4 justify-end text-white px-4 py-2 rounded"
           onClick={handleSearch}
         >
           Search
         </button>
       </div>
 
-      {eduInstitutions.map((institution) => (
+      {filteredInstitutions.map((institution) => (
         <div key={institution.id}>
           <h2 className="text-xl mb-2 mt-10 text-primary font-bold">
             {institution.name} Details
@@ -170,11 +180,13 @@ const BuyerSpecialEducationalInstitution = () => {
               {institution.contact_info.phone}
             </p>
           )}
-          {/* Conditionally render the "Apply for Job" button */}
           {institution.job_vacancy && (
-            <button className="bg-primary text-white px-4 py-1 rounded">
+            <Link
+              to="/allJobs"
+              className="bg-primary text-white px-4 py-2 rounded"
+            >
               Apply for Job
-            </button>
+            </Link>
           )}
         </div>
       ))}

@@ -70,14 +70,14 @@ const AddInstitution = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-md shadow-lg my-8 p-4">
+    <div className="max-w-4xl mx-auto bg-white rounded-md shadow-lg my-8 p-4">
       <h2 className="text-2xl mb-4 text-center text-primary font-bold">
         Add Your Institution
       </h2>
       <form onSubmit={handleSubmit}>
         {/* Institution Name */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Institution Name *
           </label>
           <input
@@ -92,7 +92,7 @@ const AddInstitution = () => {
 
         {/* Location */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Location *
           </label>
           <div className="flex">
@@ -119,7 +119,7 @@ const AddInstitution = () => {
 
         {/* Distance from Place */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Distance from Place (km) *
           </label>
           <input
@@ -134,7 +134,7 @@ const AddInstitution = () => {
 
         {/* Student Information */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Student Information *
           </label>
           <div className="flex">
@@ -170,7 +170,7 @@ const AddInstitution = () => {
 
         {/* Short Detail */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Short Detail *
           </label>
           <textarea
@@ -184,7 +184,7 @@ const AddInstitution = () => {
 
         {/* Accommodation */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Accommodation *
           </label>
           <label className="inline-flex items-center">
@@ -201,7 +201,7 @@ const AddInstitution = () => {
 
         {/* Job Vacancy */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Job Vacancy *
           </label>
           <label className="inline-flex items-center">
@@ -218,7 +218,7 @@ const AddInstitution = () => {
 
         {/* Faculty and Staff Information */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Faculty and Staff Information *
           </label>
           <div className="flex">
@@ -245,7 +245,7 @@ const AddInstitution = () => {
 
         {/* Established Year */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Established Year *
           </label>
           <input
@@ -260,7 +260,7 @@ const AddInstitution = () => {
 
         {/* Accreditation */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Accreditation *
           </label>
           <input
@@ -275,7 +275,7 @@ const AddInstitution = () => {
 
         {/* Website */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Website *
           </label>
           <input
@@ -290,7 +290,7 @@ const AddInstitution = () => {
 
         {/* Contact Information */}
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-semibold mb-2">
+          <label className="block text-primary text-sm font-bold mb-2">
             Contact Information *
           </label>
           <div className="flex">
@@ -319,7 +319,7 @@ const AddInstitution = () => {
         <div className="text-center">
           <button
             type="submit"
-            className="bg-primary text-white px-4 py-2 rounded-md"
+            className="bg-primary w-40 text-white px-4 py-2 rounded-md"
           >
             Create Post
           </button>

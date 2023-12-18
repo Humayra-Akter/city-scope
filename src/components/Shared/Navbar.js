@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 
 const Navbar = () => {
-  const isLoggedIn = localStorage.getItem("loggedInUser");
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const { userType } = loggedInUser || {};
 
   const handleSignOut = () => {
     const confirmSignOut = window.confirm("Are you sure you want to sign out?");
@@ -26,14 +27,17 @@ const Navbar = () => {
           <Link className="pr-10" to="/freeFeatures">
             <button>Features</button>
           </Link>
-          {isLoggedIn ? (
+          {userType === "seller" && (
+            <Link to="/sellerDashboard">
+              <button className="pr-10">Seller-Dashboard</button>
+            </Link>
+          )}
+          {userType === "buyer" && (
             <Link to="/allJobs">
               <button className="pr-10">Search-Job</button>
             </Link>
-          ) : (
-            <></>
           )}
-          {isLoggedIn ? (
+          {loggedInUser ? (
             <button className="pr-10" onClick={handleSignOut}>
               Sign-out
             </button>

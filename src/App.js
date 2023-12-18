@@ -12,6 +12,9 @@ import SellerDashboard from "./components/SellerDashboard/SellerDashboard";
 import AddInstitution from "./components/SellerDashboard/AddInstitution";
 import JobAnnounce from "./components/SellerDashboard/JobAnnounce";
 import AllJobs from "./components/Shared/AllJobs";
+import ApplyForJob from "./components/Features/ApplyForJob";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
         <Route path="/freeFeatures" element={<FreeFeatures />} />
         <Route path="/allJobs" element={<AllJobs />} />
         <Route path="/localMarket" element={<LocalMarket />} />
+        <Route path="/applyForJob/:jobId" element={<ApplyForJob />} />
         <Route path="/sellerDashboard" element={<SellerDashboard />} />
         {/* seller dashboard  */}
         <Route path="/sellerDashboard" element={<SellerDashboard />}>
@@ -39,8 +43,8 @@ function App() {
           element={<BuyerSpecialEducationalInstitution />}
         />
       </Routes>
-
       <Footer />
+      <ToastContainer />
     </div>
   );
 }
