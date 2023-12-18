@@ -82,6 +82,14 @@ const Login = () => {
               >
                 Login
               </button>
+              <p className="text-center mt-4">
+                <small className="text-base font-semibold">
+                  Don't have an account? 
+                  <Link className="text-primary" to="/register">
+                     Register
+                  </Link>
+                </small>
+              </p>
             </div>
           </form>
         </div>
