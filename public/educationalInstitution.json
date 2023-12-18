@@ -1,0 +1,294 @@
+{
+  "educational_institutions": [
+    {
+      "name": "University A",
+      "image": "./images/uni.jpg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-10"
+      },
+      "distance_from_place": 10,
+      "student_info": {
+        "total_students": 15000,
+        "undergraduates": 10000,
+        "postgraduates": 5000
+      },
+      "short_detail": "A leading research university with a focus on science and technology.",
+      "accommodation": true,
+      "job_vacancy": false,
+      "faculty_number": 300,
+      "staff_number": 500,
+      "established_year": 1998,
+      "accreditation": "AASCB, ABET",
+      "website": "http://universitya.edu",
+      "contact_info": {
+        "email": "https://mist.ac.bd/",
+        "phone": "+123 456 78900"
+      }
+    },
+    {
+      "name": "College B",
+      "image": "./images/clg.jpg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-11"
+      },
+      "distance_from_place": 25,
+      "student_info": {
+        "total_students": 8000,
+        "undergraduates": 6000,
+        "postgraduates": 2000
+      },
+      "short_detail": "A liberal arts college fostering creativity and critical thinking.",
+      "accommodation": true,
+      "job_vacancy": true,
+      "faculty_number": 150,
+      "staff_number": 250,
+      "established_year": 1985,
+      "accreditation": "NEASC",
+      "website": "http://collegeb.edu",
+      "contact_info": {
+        "email": "info@collegeb.edu",
+        "phone": "+987 654 32210"
+      }
+    },
+    {
+      "name": "Technical Institute C",
+      "image": "./images/tech.jpg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-12"
+      },
+      "distance_from_place": 5,
+      "student_info": {
+        "total_students": 12000,
+        "undergraduates": 8000,
+        "postgraduates": 4000
+      },
+      "short_detail": "Specializing in engineering and applied sciences.",
+      "accommodation": false,
+      "job_vacancy": true,
+      "faculty_number": 200,
+      "staff_number": 300,
+      "established_year": 1972,
+      "accreditation": "ABET",
+      "website": "http://techinstitutec.edu",
+      "contact_info": {
+        "email": "info@techinstitutec.edu",
+        "phone": "+111 222 33335"
+      }
+    },
+    {
+      "name": "Tech Masters College",
+      "image": "./images/1.jpeg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-11.5"
+      },
+      "distance_from_place": 7,
+      "student_info": {
+        "total_students": 12000,
+        "undergraduates": 8000,
+        "postgraduates": 4000
+      },
+      "short_detail": "Specializing in engineering and applied sciences.",
+      "accommodation": true,
+      "job_vacancy": false,
+      "faculty_number": 200,
+      "staff_number": 300,
+      "established_year": 1972,
+      "accreditation": "ABET",
+      "website": "http://techmasterscollege.edu",
+      "contact_info": {
+        "email": "info@techmasterscollege.edu",
+        "phone": "+111 222 33335"
+      }
+    },
+    {
+      "name": "Inventive Tech University",
+      "image": "./images/2.jpeg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-6"
+      },
+      "distance_from_place": 2,
+      "student_info": {
+        "total_students": 12000,
+        "undergraduates": 8000,
+        "postgraduates": 4000
+      },
+      "short_detail": "Specializing in engineering and applied sciences.",
+      "accommodation": false,
+      "job_vacancy": true,
+      "faculty_number": 200,
+      "staff_number": 300,
+      "established_year": 1972,
+      "accreditation": "ABET",
+      "website": "http://inventivetechuniversity.edu",
+      "contact_info": {
+        "email": "info@inventivetechuniversity.edu",
+        "phone": "+111 222 33335"
+      }
+    },
+
+    {
+      "name": "Tech Visionaries Institute",
+      "image": "./images/3.jpeg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-1"
+      },
+      "distance_from_place": 5,
+      "student_info": {
+        "total_students": 12000,
+        "undergraduates": 8000,
+        "postgraduates": 4000
+      },
+      "short_detail": "Specializing in engineering and applied sciences.",
+      "accommodation": true,
+      "job_vacancy": false,
+      "faculty_number": 200,
+      "staff_number": 300,
+      "established_year": 1972,
+      "accreditation": "ABET",
+      "website": "http://techvisionariesinstitute.edu",
+      "contact_info": {
+        "email": "info@techvisionariesinstitute.edu",
+        "phone": "+111 222 33335"
+      }
+    },
+
+    {
+      "name": "Tech Pioneers University",
+      "image": "./images/4.jpeg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-10"
+      },
+      "distance_from_place": 6,
+      "student_info": {
+        "total_students": 12000,
+        "undergraduates": 8000,
+        "postgraduates": 4000
+      },
+      "short_detail": "Specializing in engineering and applied sciences.",
+      "accommodation": false,
+      "job_vacancy": true,
+      "faculty_number": 200,
+      "staff_number": 300,
+      "established_year": 1972,
+      "accreditation": "ABET",
+      "website": "http://techpioneersuniversity.edu",
+      "contact_info": {
+        "email": "info@techpioneersuniversity.edu",
+        "phone": "+111 222 33335"
+      }
+    },
+    {
+      "name": "Technology Hub University",
+      "image": "./images/5.jpeg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-14"
+      },
+      "distance_from_place": 3,
+      "student_info": {
+        "total_students": 12000,
+        "undergraduates": 8000,
+        "postgraduates": 4000
+      },
+      "short_detail": "Specializing in engineering and applied sciences.",
+      "accommodation": true,
+      "job_vacancy": false,
+      "faculty_number": 200,
+      "staff_number": 300,
+      "established_year": 1972,
+      "accreditation": "ABET",
+      "website": "http://techhubuniversity.edu",
+      "contact_info": {
+        "email": "info@techhubuniversity.edu",
+        "phone": "+111 222 33335"
+      }
+    },
+
+    {
+      "name": "Innovative Tech College",
+      "image": "./images/6.jpeg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-13"
+      },
+      "distance_from_place": 6,
+      "student_info": {
+        "total_students": 12000,
+        "undergraduates": 8000,
+        "postgraduates": 4000
+      },
+      "short_detail": "Specializing in engineering and applied sciences.",
+      "accommodation": false,
+      "job_vacancy": true,
+      "faculty_number": 200,
+      "staff_number": 300,
+      "established_year": 1972,
+      "accreditation": "ABET",
+      "website": "http://innovativetechcollege.edu",
+      "contact_info": {
+        "email": "info@innovativetechcollege.edu",
+        "phone": "+111 222 33335"
+      }
+    },
+    {
+      "name": "Advanced Tech Institute",
+      "image": "./images/7.jpeg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-11"
+      },
+      "distance_from_place": 8,
+      "student_info": {
+        "total_students": 12000,
+        "undergraduates": 8000,
+        "postgraduates": 4000
+      },
+      "short_detail": "Specializing in engineering and applied sciences.",
+      "accommodation": true,
+      "job_vacancy": false,
+      "faculty_number": 200,
+      "staff_number": 300,
+      "established_year": 1972,
+      "accreditation": "ABET",
+      "website": "http://advancedtechinstitute.edu",
+      "contact_info": {
+        "email": "info@advancedtechinstitute.edu",
+        "phone": "+111 222 33335"
+      }
+    },
+
+    {
+      "name": "Tech Innovators University",
+      "image": "./images/8.jpeg",
+      "location": {
+        "city": "Dhaka",
+        "area": "Mirpur-12"
+      },
+      "distance_from_place": 4,
+      "student_info": {
+        "total_students": 12000,
+        "undergraduates": 8000,
+        "postgraduates": 4000
+      },
+      "short_detail": "Specializing in engineering and applied sciences.",
+      "accommodation": false,
+      "job_vacancy": true,
+      "faculty_number": 200,
+      "staff_number": 300,
+      "established_year": 1972,
+      "accreditation": "ABET",
+      "website": "http://techinnovatorsuniversity.edu",
+      "contact_info": {
+        "email": "info@techinnovatorsuniversity.edu",
+        "phone": "+111 222 33335"
+      }
+    }
+  ]
+}
