@@ -44,29 +44,28 @@ const ApplyForJob = () => {
 
   return (
     <div className="max-w-4xl mx-auto bg-white rounded-md shadow-lg my-8 p-4">
-      <h2 className="text-2xl text-center text-primary font-bold mb-4">
-        Apply for Job - {jobInfo.title}
+      <h2 className="text-2xl text-center text-primary font-bold mb-14">
+        Apply for Job -{" "}
+        <span className="text-black uppercase">{jobInfo.title}</span>
       </h2>
       <form onSubmit={handleSubmit}>
         {/* Fields populated with job information */}
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">
-            Job Title
-          </label>
-          <p>{jobInfo.title}</p>
+          <p className="block text-lg text-primary font-bold">
+            Job Title : <span className="text-black">{jobInfo.title}</span>
+          </p>
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">
-            Location
-          </label>
-          <p>{jobInfo.location}</p>
+          <p className="block text-lg text-primary font-bold">
+            Location : <span className="text-black">{jobInfo.location}</span>
+          </p>
         </div>
 
         {/* User input fields */}
         <div className="mb-4">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm text-primary font-bold"
           >
             Email
           </label>
@@ -83,7 +82,7 @@ const ApplyForJob = () => {
         <div className="mb-4">
           <label
             htmlFor="phoneNumber"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-sm text-primary font-bold"
           >
             Phone Number
           </label>
@@ -97,10 +96,7 @@ const ApplyForJob = () => {
           />
         </div>
         <div className="mb-4">
-          <label
-            htmlFor="cv"
-            className="block text-sm font-medium text-gray-700"
-          >
+          <label htmlFor="cv" className="block text-sm text-primary font-bold">
             CV (Upload)
           </label>
           <input
@@ -113,7 +109,7 @@ const ApplyForJob = () => {
         </div>
 
         {/* Submit button */}
-        <div className="mt-4">
+        <div className="mt-4 flex items-center justify-center">
           <button
             type="submit"
             className="bg-primary text-white px-4 py-2 rounded"
