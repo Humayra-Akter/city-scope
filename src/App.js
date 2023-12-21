@@ -15,6 +15,7 @@ import AllJobs from "./components/Shared/AllJobs";
 import ApplyForJob from "./components/Features/ApplyForJob";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/about" element={<About />} />
         <Route path="/freeFeatures" element={<FreeFeatures />} />
         <Route path="/allJobs" element={<AllJobs />} />
         <Route path="/localMarket" element={<LocalMarket />} />
